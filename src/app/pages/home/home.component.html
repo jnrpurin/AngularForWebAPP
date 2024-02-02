@@ -1,0 +1,48 @@
+
+<div class="employee-box">
+  <button>New Employee</button>
+  <div class="input-box">
+    <label>Search</label>
+    <input type="text" placeholder="What record do you is looking for?" (input)="searchEmployee($event)">
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Last Name</th>
+      <th>Shift</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of employeesList; track item.id){
+      <tr>
+        <td>
+          @if (item.isActive) {
+            <div>
+              <img src="assets/images/active2.png" alt="" style="height: 20px; width: 20px">
+            </div>
+          }
+          @else {
+            <div>
+              <img src="assets/images/inactive.png" alt="" style="height: 20px; width: 20px">
+            </div>
+          }
+        </td>
+        <td>{{ item.firstName }}</td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.shift }}</td>
+        <td>
+          <button>Edit</button>
+          <button>Details</button>
+        </td>
+        <td>
+          <button>Delete</button>
+        </td>
+      </tr>
+  }
+  </tbody>
+</table>
