@@ -1,0 +1,29 @@
+<h1>New employee</h1>
+
+<form [formGroup]="formEmployee" (ngSubmit)="submit()" #formDit="ngForm">
+
+  <div class="input_box">
+    <label id="lbl_firstName" for="">First Name</label>
+    <input id="firstName" type="text" formControlName="firstName" placeholder="Inform the first name" required>
+  </div>
+
+  <div class="input_box">
+    <label id="lbl_lastName" for="">Last Name</label>
+    <input id="lastName" type="text" formControlName="lastName" placeholder="Inform the last name" required>
+  </div>
+
+  <div class="input_box">
+    <label id="lbl_shift" for="">Shift</label>
+    <select id="shiftBox" formControlName="shiftBox" required>
+      <option value="Morning">Morning</option>
+      <option value="Afternoon">Afternoon</option>
+      <option value="Night">Night</option>
+    </select>
+  </div>
+
+  <div class="btn_box">
+    <button type="submit">Save</button>
+    <button >Cancel</button>
+  </div>
+
+</form>

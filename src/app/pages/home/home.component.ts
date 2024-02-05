@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../models/Employee';
 import { EmployeeService } from '../../services/employee.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-myHome',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
