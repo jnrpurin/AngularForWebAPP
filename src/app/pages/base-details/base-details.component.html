@@ -1,0 +1,43 @@
+<div>
+  <h1>Details</h1>
+</div>>
+
+<div>
+  <form>
+    @if (employee != null) {
+    <div class="input-box">
+      <label>Id</label>
+      <input type="text" value="{{employee.id}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>First Name</label>
+      <input type="text" value="{{employee.firstName}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>Last Name</label>
+      <input type="text" value="{{employee.lastName}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>Shift</label>
+      <input type="text" value="{{employee.shift}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>Is Active</label>
+      <input type="text" value="{{employee.isActive}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>Created Date</label>
+      <input type="text" value="{{employee.createdDate}}" disabled name="" id="">
+    </div>
+    <div class="input-box">
+      <label>Changed Date</label>
+      <input type="text" value="{{employee.changedDate}}" disabled name="" id="">
+    </div>
+
+    <div class="btn-box">
+      <button>Inactive User</button>
+      <button type="button" (click)="goToHome()"> Return </button>
+    </div>
+  }
+  </form>
+</div>
