@@ -12,7 +12,21 @@ export class EmployeeService {
   private apiUrl = `${environment.ApiUrl}/Employee`
   constructor( private http: HttpClient) { }
 
-  GetEmployee(): Observable<Response<Employee[]>>{
+  GetEmployeeService(): Observable<Response<Employee[]>>{
     return this.http.get<Response<Employee[]>>(this.apiUrl);
+  }
+
+  CreateEmployeeService(employee : Employee) : Observable<Response<Employee[]>>{
+    return this.http.post<Response<Employee[]>>(`${this.apiUrl}`, employee);
+  }
+
+  GetEmployeeByIdService(id: number): Observable<Response<Employee>>{
+    return this.http.get<Response<Employee>>(`${this.apiUrl}/${id}`);
+  }
+
+  EditEmployeeService(employee: Employee) : Observable<Response<Employee>> {
+    console.log('no serviço EditEmployee')
+    console.log(employee)
+    return this.http.put<Response<Employee>>(`${this.apiUrl}`,employee);
   }
 }

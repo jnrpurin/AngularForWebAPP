@@ -10,5 +10,5 @@ import { HomeComponent } from './pages/home/home.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'See peoples from Web API .Net';
+  title = 'Employees from API .Net';
 }

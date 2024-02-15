@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   employeesGeneral: Employee[] = [];
 
   ngOnInit(): void {
-    this.empoyeeService.GetEmployee().subscribe(result => {
+    this.empoyeeService.GetEmployeeService().subscribe(result => {
       const dataApi = result.data;
       dataApi.map((item) => {
         item.createdDate = new Date(item.createdDate!).toLocaleDateString('en-US');

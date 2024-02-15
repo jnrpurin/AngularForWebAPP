@@ -1,5 +1,5 @@
-<p>base works!</p>
+<p>base works! base = cadastro</p>
 
 <div>
-  <app-employee-form></app-employee-form>
+  <app-employee-form [btnAction]="btnAction" [btnTitle]="btnTitle"  (onSubmit)="CreateEmployee($event)"></app-employee-form>
 </div>

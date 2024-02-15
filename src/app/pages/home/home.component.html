@@ -7,7 +7,7 @@
   </div>
 </div>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th></th>
@@ -36,7 +36,7 @@
         <td>{{ item.lastName }}</td>
         <td>{{ item.shift }}</td>
         <td>
-          <button>Edit</button>
+          <button routerLink="/edit/{{item.id}}" >Edit</button>
           <button>Details</button>
         </td>
         <td>

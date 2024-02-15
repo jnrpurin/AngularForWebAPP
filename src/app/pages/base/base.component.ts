@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeeFormComponent } from "../../components/employee-form/employee-form.component";
+import { Employee } from '../../models/Employee';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
     selector: 'app-base',
@@ -10,4 +13,15 @@ import { EmployeeFormComponent } from "../../components/employee-form/employee-f
 })
 export class BaseComponent {
 
+  btnAction = "Save";
+  btnTitle = "Create New Employee!"
+  constructor(private employeeService: EmployeeService, private router : Router) {
+
+  }
+
+  CreateEmployee(employee: Employee){
+    this.employeeService.CreateEmployeeService(employee).subscribe( () => {
+      this.router.navigate(['/']);
+    });
+  }
 }

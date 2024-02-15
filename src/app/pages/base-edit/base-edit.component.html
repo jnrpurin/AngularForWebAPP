@@ -1,0 +1,10 @@
+@if (employee != null) {
+  <div>
+    <app-employee-form
+      [btnAction]="btnAction"
+      [btnTitle]="btnTitle"
+      [employeeData]="employee"
+      (onSubmit)="EditEmployee($event)">
+    </app-employee-form>
+  </div>
+}
