@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { BaseDetailsComponent } from './pages/base-details/base-details.component';
-import { BaseEditComponent } from './pages/base-edit/base-edit.component';
-import { BaseComponent } from './pages/base/base.component';
+import { EmployeeDetailsComponent } from './pages/employee/details/employee-details.component';
+import { EmployeeEditComponent } from './pages/employee/edit/employee-edit.component';
+import { EmployeeSaveComponent } from './pages/employee/save/employee-save.component';
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-  {path: "base", component: BaseComponent},
+  {path: 'save', component: EmployeeSaveComponent},
   {path: '', component: HomeComponent},
-  {path: 'edit/:id', component: BaseEditComponent},
-  {path: 'details/:id', component: BaseDetailsComponent},
+  {path: 'edit/:id', component: EmployeeEditComponent},
+  {path: 'details/:id', component: EmployeeDetailsComponent},
 ];

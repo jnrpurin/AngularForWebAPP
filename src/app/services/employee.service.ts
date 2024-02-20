@@ -25,8 +25,10 @@ export class EmployeeService {
   }
 
   EditEmployeeService(employee: Employee) : Observable<Response<Employee>> {
-    console.log('no serviço EditEmployee')
-    console.log(employee)
-    return this.http.put<Response<Employee>>(`${this.apiUrl}`,employee);
+    return this.http.put<Response<Employee>>(`${this.apiUrl}`, employee);
+  }
+
+  InativateEmployeeService(id: number) : Observable<Response<Employee>> {
+    return this.http.put<Response<Employee>>(`${this.apiUrl}/disableEmployee?id=${id}`, id);
   }
 }

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { EmployeeFormComponent } from "../../components/employee-form/employee-form.component";
-import { Employee } from '../../models/Employee';
-import { EmployeeService } from '../../services/employee.service';
+import { EmployeeFormComponent } from "../../../components/employee-form/employee-form.component";
+import { Employee } from '../../../models/Employee';
+import { EmployeeService } from '../../../services/employee.service';
 
 @Component({
-    selector: 'app-base',
+    selector: 'app-employee-save',
     standalone: true,
-    templateUrl: './base.component.html',
-    styleUrl: './base.component.css',
+    templateUrl: './employee-save.component.html',
+    styleUrl: './employee-save.component.css',
     imports: [EmployeeFormComponent]
 })
-export class BaseComponent {
+export class EmployeeSaveComponent {
 
   btnAction = "Save";
   btnTitle = "Create New Employee!"

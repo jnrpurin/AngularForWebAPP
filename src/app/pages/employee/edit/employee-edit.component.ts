@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EmployeeFormComponent } from '../../components/employee-form/employee-form.component';
-import { Employee } from '../../models/Employee';
-import { EmployeeService } from '../../services/employee.service';
+import { EmployeeFormComponent } from '../../../components/employee-form/employee-form.component';
+import { Employee } from '../../../models/Employee';
+import { EmployeeService } from '../../../services/employee.service';
 
 @Component({
-  selector: 'app-base-edit',
+  selector: 'app-employee-edit',
   standalone: true,
   imports: [EmployeeFormComponent],
-  templateUrl: './base-edit.component.html',
-  styleUrl: './base-edit.component.css'
+  templateUrl: './employee-edit.component.html',
+  styleUrl: './employee-edit.component.css'
 })
 
-export class BaseEditComponent implements OnInit {
+export class EmployeeEditComponent implements OnInit {
 
   btnAction:string = "Edit";
   btnTitle:string = "Change Employee!"
