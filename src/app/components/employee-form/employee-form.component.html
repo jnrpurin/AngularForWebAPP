@@ -1,31 +1,39 @@
-<h1>{{btnTitle}}</h1>
+<mat-card>
+  <h1>{{btnTitle}}</h1>
 
-<form [formGroup]="formEmployee" (ngSubmit)="submit()" #formDit="ngForm">
+  <form [formGroup]="formEmployee" (ngSubmit)="submit()" #formDit="ngForm">
 
-  <input type="hidden" formControlName="id">
+    <input type="hidden" formControlName="id">
 
-  <div class="input_box">
-    <label id="lblfirstName" for="">First Name</label>
-    <input id="firstName" type="text" formControlName="firstName" placeholder="Inform the first name" required>
-  </div>
+    <div class="input_box">
+      <mat-form-field class="example-form-field">
+        <mat-label for="">First Name</mat-label>
+        <input matInput type="text" id="firstName" type="text" formControlName="firstName" placeholder="Inform the first name" required>
+      </mat-form-field>
+    </div>
 
-  <div class="input_box">
-    <label id="lbllastName" for="">Last Name</label>
-    <input id="lastName" type="text" formControlName="lastName" placeholder="Inform the last name" required>
-  </div>
+    <div class="input_box">
+      <mat-form-field class="example-form-field">
+        <mat-label for="">Last Name</mat-label>
+        <input matInput id="lastName" type="text" formControlName="lastName" placeholder="Inform the last name" required>
+      </mat-form-field>
+    </div>
 
-  <div class="input_box">
-    <label id="lblshift" for="">Shift</label>
-    <select id="shift" formControlName="shift" required>
-      <option value="Morning">Morning</option>
-      <option value="Afternoon">Afternoon</option>
-      <option value="Night">Night</option>
-    </select>
-  </div>
+    <div class="input-box">
+      <mat-form-field>
+        <mat-label for="">Choose an Shift</mat-label>
+        <mat-select formControlName="shift" required >
+          <mat-option value="Morning">Morning</mat-option>
+          <mat-option value="Afternoon">Afternoon</mat-option>
+          <mat-option value="Night">Night</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-  <div>
-    <button type="submit" [disabled]="!formEmployee.valid"> {{btnAction}} </button>
+    <div class="btn-box">
+      <button type="submit" [disabled]="!formEmployee.valid" mat-raised-button color="primary" > {{btnAction}} </button>
 
-    <button type="button" (click)="goToHome()"> Cancel </button>
-  </div>
-</form>
+      <button type="button" (click)="goToHome()" mat-raised-button> Cancel </button>
+    </div>
+  </form>
+</mat-card>

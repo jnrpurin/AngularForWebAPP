@@ -31,4 +31,8 @@ export class EmployeeService {
   InativateEmployeeService(id: number) : Observable<Response<Employee>> {
     return this.http.put<Response<Employee>>(`${this.apiUrl}/disableEmployee?id=${id}`, id);
   }
+
+  DeleteEmployeeService(id: number) : Observable<Response<Employee>> {
+    return this.http.delete<Response<Employee>>(`${this.apiUrl}/${id}`);
+  }
 }
