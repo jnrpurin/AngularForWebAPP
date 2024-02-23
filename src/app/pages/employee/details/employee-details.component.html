@@ -6,53 +6,60 @@
   <div>
     <form>
       @if (employee != null) {
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Id </mat-label>
-          <input matInput type="text" value="{{employee.id}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">First Name </mat-label>
-          <input matInput type="text" value="{{employee.firstName}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Last Name </mat-label>
-          <input matInput type="text" value="{{employee.lastName}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Shift </mat-label>
-          <input matInput type="text" value="{{employee.shift}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Is Active </mat-label>
-          <input matInput type="text" value="{{employee.isActive}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Created Date </mat-label>
-          <input matInput type="text" value="{{employee.createdDate}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
-      <div class="input-box">
-        <mat-form-field class="example-form-field">
-          <mat-label for="">Changed Date </mat-label>
-          <input matInput type="text" value="{{employee.changedDate}}" disabled name="" id="">
-        </mat-form-field>
-      </div>
 
-      <div class="btn-box">
-        <button type="button" (click)="inactiveEmployee()" mat-raised-button color="warn" > Inactive Employee </button>
-        <button type="button" (click)="goToHome()" mat-raised-button > Return </button>
-      </div>
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Id </mat-label>
+            <input matInput type="text" value="{{employee.id}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">First Name </mat-label>
+            <input matInput type="text" value="{{employee.firstName}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Last Name </mat-label>
+            <input matInput type="text" value="{{employee.lastName}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Shift </mat-label>
+            <input matInput type="text" value="{{employee.shift}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Is Active </mat-label>
+            <input matInput type="text" value="{{employee.isActive}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Created Date </mat-label>
+            <input matInput type="text" value="{{employee.createdDate}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="input-box">
+          <mat-form-field class="example-form-field">
+            <mat-label for="">Changed Date </mat-label>
+            <input matInput type="text" value="{{employee.changedDate}}" disabled name="" id="">
+          </mat-form-field>
+        </div>
+
+        <div class="btn-box">
+          <button type="button" (click)="inactiveEmployee()" mat-raised-button color="warn" > Inactive Employee </button>
+          <button type="button" (click)="goToHome()" mat-raised-button > Return </button>
+        </div>
     }
     </form>
   </div>
