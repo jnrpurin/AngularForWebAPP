@@ -3,7 +3,6 @@ import { ReactiveFormsModule, FormsModule, FormControl, FormGroup, Validators } 
 import { Router } from '@angular/router';
 import { Employee } from '../../models/Employee';
 
-
 //angular material
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -14,7 +13,8 @@ import { MatSelectModule } from '@angular/material/select';
 @Component({
   selector: 'app-employee-form',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, MatButtonModule, MatCardModule, MatInputModule, MatSelectModule],
+  imports: [ReactiveFormsModule, FormsModule,
+    MatButtonModule, MatCardModule, MatInputModule, MatSelectModule],
   templateUrl: './employee-form.component.html',
   styleUrl: './employee-form.component.css'
 })

@@ -1,42 +1,59 @@
-<div>
-  <h1>Details</h1>
-</div>
+<mat-card>
+  <div>
+    <h1>Details</h1>
+  </div>
 
-<div>
-  <form>
-    @if (employee != null) {
-    <div class="input-box">
-      <input hidden type="text" value="{{employee.id}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>First Name</label>
-      <input type="text" value="{{employee.firstName}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>Last Name</label>
-      <input type="text" value="{{employee.lastName}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>Shift</label>
-      <input type="text" value="{{employee.shift}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>Is Active</label>
-      <input type="text" value="{{employee.isActive}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>Created Date</label>
-      <input type="text" value="{{employee.createdDate}}" disabled name="" id="">
-    </div>
-    <div class="input-box">
-      <label>Changed Date</label>
-      <input type="text" value="{{employee.changedDate}}" disabled name="" id="">
-    </div>
+  <div>
+    <form>
+      @if (employee != null) {
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Id </mat-label>
+          <input matInput type="text" value="{{employee.id}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">First Name </mat-label>
+          <input matInput type="text" value="{{employee.firstName}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Last Name </mat-label>
+          <input matInput type="text" value="{{employee.lastName}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Shift </mat-label>
+          <input matInput type="text" value="{{employee.shift}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Is Active </mat-label>
+          <input matInput type="text" value="{{employee.isActive}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Created Date </mat-label>
+          <input matInput type="text" value="{{employee.createdDate}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
+      <div class="input-box">
+        <mat-form-field class="example-form-field">
+          <mat-label for="">Changed Date </mat-label>
+          <input matInput type="text" value="{{employee.changedDate}}" disabled name="" id="">
+        </mat-form-field>
+      </div>
 
-    <div class="btn-box">
-      <button type="button" (click)="inactiveEmployee()" mat-raised-button color="warn" > Inactive Employee </button>
-      <button type="button" (click)="goToHome()" mat-raised-button > Return </button>
-    </div>
-  }
-  </form>
-</div>
+      <div class="btn-box">
+        <button type="button" (click)="inactiveEmployee()" mat-raised-button color="warn" > Inactive Employee </button>
+        <button type="button" (click)="goToHome()" mat-raised-button > Return </button>
+      </div>
+    }
+    </form>
+  </div>
+</mat-card>
