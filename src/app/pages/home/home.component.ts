@@ -53,8 +53,8 @@ export class HomeComponent implements OnInit {
 
   openDialogDelete(id: number){
       this.dialog.open(DeleteComponent, {
-        width: '250px',
-        height: '250px',
+        width: '350px',
+        height: '400px',
         data:{
           id: id
         }

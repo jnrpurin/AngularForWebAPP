@@ -1,0 +1,13 @@
+h1 {
+  color: white;
+  margin: 10px 10px 16px;
+}
+
+.mat-mdc-button-base{
+  margin: 8px 8px 0px 0px;
+}
+
+p {
+  color: white;
+  font: bold;
+}

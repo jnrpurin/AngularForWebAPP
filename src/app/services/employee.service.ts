@@ -5,10 +5,6 @@ import { environment } from '../../environments/environment.development';
 import { Employee } from '../models/Employee';
 import { Response } from '../models/Response';
 
-//for local tests
-import { FAKE_RESPONSE } from './fakeresponse';
-import { FAKE_RESPONSE_ARRAY } from './fakeresponse';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,8 +13,7 @@ export class EmployeeService {
   constructor( private http: HttpClient) { }
 
   GetEmployeeService(): Observable<Response<Employee[]>>{
-    //return this.http.get<Response<Employee[]>>(this.apiUrl);
-    return of (FAKE_RESPONSE_ARRAY);
+    return this.http.get<Response<Employee[]>>(this.apiUrl);
   }
 
   CreateEmployeeService(employee : Employee) : Observable<Response<Employee[]>>{
@@ -26,13 +21,11 @@ export class EmployeeService {
   }
 
   GetEmployeeByIdService(id: number): Observable<Response<Employee>>{
-    //return this.http.get<Response<Employee>>(`${this.apiUrl}/${id}`);
-    return of (FAKE_RESPONSE);
+    return this.http.get<Response<Employee>>(`${this.apiUrl}/${id}`);
   }
 
   EditEmployeeService(employee: Employee) : Observable<Response<Employee>> {
-    //return this.http.put<Response<Employee>>(`${this.apiUrl}`, employee);
-    return of (FAKE_RESPONSE);
+    return this.http.put<Response<Employee>>(`${this.apiUrl}`, employee);
   }
 
   InativateEmployeeService(id: number) : Observable<Response<Employee>> {
@@ -40,6 +33,6 @@ export class EmployeeService {
   }
 
   DeleteEmployeeService(id: number) : Observable<Response<Employee>> {
-    return this.http.delete<Response<Employee>>(`${this.apiUrl}/${id}`);
+    return this.http.delete<Response<Employee>>(`${this.apiUrl}?id=${id}`);
   }
 }
